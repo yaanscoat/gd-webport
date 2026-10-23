@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  outline: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#boot {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 40%, #1d63d6 0%, #0b2d77 55%, #041434 100%);
+  color: #fff;
+  font-family: "Arial Black", "Segoe UI", system-ui, sans-serif;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 0.4s;
+}
+
+#boot.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.boot-inner {
+  padding: 16px;
+  width: min(420px, 100% - 32px);
+}
+
+.boot-title {
+  font-size: clamp(28px, 7vw, 48px);
+  letter-spacing: 1px;
+  text-shadow: 0 3px 0 #000, 0 0 18px rgba(255, 255, 255, 0.35);
+}
+
+.boot-sub {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 22px;
+}
+
+.boot-bar {
+  height: 14px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+}
+
+#boot-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(#a8ff4a, #3fd400);
+  transition: width 0.15s;
+}
+
+#boot-status {
+  margin-top: 10px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  opacity: 0.85;
+  min-height: 1.2em;
+}
+
+.credit {
+  display: inline-block;
+  margin-top: 26px;
+  color: #ffe36b;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.credit:hover {
+  text-decoration: underline;
+}
